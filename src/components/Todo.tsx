@@ -5,18 +5,22 @@ import React from 'react'
 
 interface Todos {
   task: string,
+  id: string,
+  removeTask: (id: string) => void,
+  makeComplete: (id: string) => void,
+  completed: boolean
 }
-const Todo = ({ task }: Todos) => {
+const Todo = ({ id, task, removeTask, makeComplete, completed }: Todos) => {
   return (
     <div className='TodoComp'>
       <div className='Todo'>
-      <p className='text-white'>{ task }</p>
+      <p className={ completed === true ? 'text-white completed' : "text-white" }
+        onClick={() => makeComplete(id)}>{ task }</p>
       <div>
-      <FontAwesomeIcon icon={ faPenToSquare } className='FontAwesomeIcon'/>
-      <FontAwesomeIcon icon={ faTrash } className='FontAwesomeIcon'/>
+      <FontAwesomeIcon icon={ faPenToSquare } className='FontAwesomeIcon'  onClick={() => console.log(id)}/>
+      <FontAwesomeIcon icon={ faTrash } className='FontAwesomeIcon' onClick={() => removeTask(id)}/>
       </div>
       </div>
-      
     </div>
   )
 }

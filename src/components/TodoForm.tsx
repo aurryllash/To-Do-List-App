@@ -5,7 +5,9 @@ interface TodoFormProps {
 }
 
 const TodoForm = ({ addTodo }: TodoFormProps) => {
+
   const [value, setValue] = useState<string>('')
+  
   const handleTask = (event: FormEvent) => {
     event.preventDefault();
 
@@ -14,6 +16,7 @@ const TodoForm = ({ addTodo }: TodoFormProps) => {
       setValue('');
     }
   }
+
   return (
     <form className='Todo-form' onSubmit={handleTask}>
       <input type="text" className='todo-input' value={value} placeholder='What am I supposed to do today?'
