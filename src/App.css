@@ -29,6 +29,7 @@ button {
 }
 .Todo-form {
   margin-bottom: 50px;
+  
 }
 
 .TodoComp {
@@ -42,9 +43,9 @@ button {
   align-items: center;
   justify-content: space-between;
 
-  width: 30%;
+  width: 26%;
   background-color: rgb(157, 157, 169);
-  padding: 20px 40px;
+  padding: 15px 40px;
   margin-bottom: 10px;
   border-radius: 10px;
   color: white;
@@ -64,6 +65,12 @@ button {
 .completed {
   text-decoration: line-through;
   text-decoration-color: rgb(77, 77, 77);
+}
+.Edit-Todo-form button {
+  background-color: rgb(221, 185, 221);
+}
+.Edit-Todo-form button:hover {
+  background-color: rgb(221, 120, 221);
 }
 
 
