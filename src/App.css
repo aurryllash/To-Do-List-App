@@ -1,11 +1,10 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-  background-color: rgb(69, 78, 105);
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  background-color: rgb(64, 143, 176);
+}
 input {
   background-color: #fff;
   border: 1px solid grey;
@@ -26,16 +25,34 @@ button {
 .todoWrapper {
   
   padding: 40px 0;
+  width: 70%;
+  min-height: 100vh;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+.todoWrapper H1 {
+  color: white;  
+  margin-bottom: 20px;
 }
 .Todo-form {
-  margin-bottom: 50px;
-  
-}
-
-.TodoComp {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+
+  margin-bottom: 50px;
+  width: 500px;
+}
+.Todo-form input {
+  width: 300px;
+}
+.todo-btn {
+  transition: background-color 0.3s;
+}
+.todo-btn:hover {
+  background-color: #e3afaf;
 }
 .Todo {
   display: flex;
@@ -43,7 +60,7 @@ button {
   align-items: center;
   justify-content: space-between;
 
-  width: 26%;
+  width: 350px;
   background-color: rgb(157, 157, 169);
   padding: 15px 40px;
   margin-bottom: 10px;
@@ -51,12 +68,15 @@ button {
   color: white;
   font-weight: 700;
 }
+.Edit-Todo-form {
+  width: 400px;
+}
 
 .FontAwesomeIcon {
-  color: white;                /* Icon color */
-  cursor: pointer;             /* Cursor pointer for interactive elements */
+  color: white;  
+  cursor: pointer;
   transition: color 0.3s;
-  margin-right: 1rem;      /* Smooth color transition */
+  margin-right: 1rem;   
 }
 
 .FontAwesomeIcon:hover {
@@ -65,6 +85,7 @@ button {
 .completed {
   text-decoration: line-through;
   text-decoration-color: rgb(77, 77, 77);
+  cursor: pointer;
 }
 .Edit-Todo-form button {
   background-color: rgb(221, 185, 221);
